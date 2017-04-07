@@ -1,18 +1,38 @@
-<link rel="import"  href="/bower_components/polymer/polymer.html">
-<link rel="import"  href="/bower_components/paper-card/paper-card.html">
+<link rel="import" href="/bower_components/polymer/polymer.html">
+
+<link rel="import" href="/bower_components/iron-collapse/iron-collapse.html">
+<link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="/bower_components/iron-icons/social-icons.html">
+<link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
+
+<link rel="import" href="/bower_components/paper-card/paper-card.html">
 
 <link rel="import" href="paper-social-actions.html">
 
 <dom-module id="author-info">
 
   <template>
+    <style is="custom-style">
+      paper-card { min-width: 350px; width: 100%; margin: .5rem; }
+      paper-card.light { --paper-card-header-color: #F8F6F2; }
+    </style>
+
     <paper-card heading="{{name}}" image="{{pic_url}}" alt="{{name}}" class="light">
-      <style is="custom-style">
-        paper-card { max-width: 500px; }
-        paper-card.light { --paper-card-header-color: #F8F6F2; }
-      </style>
+
       <div class="card-content">
-        <p>{{author_bio}}</p>
+        <p><cite>{{author_tag}}</cite>
+          <paper-icon-button
+            icon="hardware:keyboard-arrow-up"
+            title="more info"
+            on-click="moreText"
+            style="float:right;">
+          </paper-icon-button>
+        </p>
+        <p></p>
+        <iron-collapse id="collapse"
+          style="width:100%;">
+          {{author_bio}}
+        </iron-collapse>
       </div>
       <div class="card-actions">
         <paper-social-actions social="{{social_network}}"></paper-social-actions>
@@ -43,8 +63,34 @@
           author_bio: {
             type: String,
             value: "Lorem Ipsem etc blah blah blah"
+          },
+          author_tag: {
+            type: String,
+            value: "My name is Tag Clanken"
+          },
+          horizontal: {
+            type: Boolean,
+            reflectToAttribute: false
+          },
+          opened: {
+            type: Boolean,
+            reflectToAttribute: true
+          },
+          noAnimation: {
+            type: Boolean,
+            reflectToAttribute: false
           }
         }
+
+      }
+
+      // Add methods to the element's public API
+      greetMe() {
+        console.log(this.author_tag);
+      }
+
+      moreText() {
+        this.$.collapse.toggle();
       }
 
     }
