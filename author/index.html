@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <title>Polymer Tests</title>
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- <link rel="import" href="/bower_components/iron-component-page/iron-component-page.html"> -->
+    <!-- <link rel="import"  href="/bower_components/iron-flex-layout/iron-flex-layout.html">
+    <link rel="import" href="/bower_components/polymer/polymer.html"> -->
+
+    <link rel="import" href="author-info.html">
+    <link rel="import" href="/bower_components/iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="/bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
+
+    <link rel="import" href="/bower_components/iron-collapse/iron-collapse.html">
+    <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="/bower_components/iron-icons/communication-icons.html">
+    <link rel="import" href="/bower_components/iron-icons/hardware-icons.html">
+    <link rel="import" href="/bower_components/iron-icons/social-icons.html">
+    <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
+    <link rel="import" href="/bower_components/paper-button/paper-button.html">
+    <link rel="import" href="/bower_components/paper-checkbox/paper-checkbox.html">
+    <link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="/bower_components/paper-styles/color.html">
+    <link rel="import" href="/bower_components/paper-styles/typography.html">
+    <link rel="import" href="/bower_components/paper-card/paper-card.html">
+    <style is="custom-style">
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      paper-card {
+        max-width: 500px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <!-- <paper-card heading="Emmental" image="http://placehold.it/350x150/FFC107/000000" alt="Emmental">
+      <div class="card-content">
+        Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+      </div>
+      <div class="card-actions">
+        <paper-button>Share</paper-button>
+        <paper-button>Explore!</paper-button>
+      </div>
+    </paper-card> -->
+    <author-info
+            name="Darren Odden"
+            site="https://www.odden.io"
+            pic_url="http://placehold.it/350x150/60249E/F8F6F2"
+            social_network='[
+                {"name":"Twitter","url":"https://twitter.com/darrenodden"},
+                {"name":"LinkedIn","url":"https://linkedin.com/in/darrenodden"},
+                {"name":"Facebook","url":"https://facebook.com/DarrenOddenbyDesign"}
+              ]'
+            >
+    </author-info>
+  </body>
+</html>
