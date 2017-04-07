@@ -1,0 +1,54 @@
+<link rel="import"  href="/bower_components/polymer/polymer.html">
+<link rel="import"  href="/bower_components/paper-card/paper-card.html">
+
+<link rel="import" href="paper-social-actions.html">
+
+<dom-module id="author-info">
+
+  <template>
+    <paper-card heading="{{name}}" image="{{pic_url}}" alt="{{name}}" class="light">
+      <style is="custom-style">
+        paper-card { max-width: 500px; }
+        paper-card.light { --paper-card-header-color: #F8F6F2; }
+      </style>
+      <div class="card-content">
+        <p>{{author_bio}}</p>
+      </div>
+      <div class="card-actions">
+        <paper-social-actions social="{{social_network}}"></paper-social-actions>
+      </div>
+    </paper-card>
+  </template>
+
+  <script>
+    class Author extends Polymer.Element {
+      static get is() { return "author-info" }
+      static get properties() {
+        return {
+          name: {
+            type: String,
+            value: "Joey"
+          },
+          site: {
+            type: String,
+            value: "site"
+          },
+          pic_url: {
+            type: String,
+            value: "na"
+          },
+          social_network: {
+            type: Array
+          },
+          author_bio: {
+            type: String,
+            value: "Lorem Ipsem etc blah blah blah"
+          }
+        }
+      }
+
+    }
+    customElements.define(Author.is, Author);
+  </script>
+
+</dom-module>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>oio-polymer</title>
+    <meta name="description" content="oio-polymer description">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
+    <link rel="import" href="/bower_components/iron-component-page/iron-component-page.html">
+
+    <link rel="import" href="/src/author/author-info.html">
+    <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    </style>
+  </head>
+  <body>
+    <author-info
+            name="Darren Odden"
+            site="https://www.odden.io"
+            pic_url="http://placehold.it/350x150/60249E/F8F6F2"
+            social_network='[
+                {"name":"Twitter","url":"https://twitter.com/darrenodden"},
+                {"name":"LinkedIn","url":"https://linkedin.com/in/darrenodden"},
+                {"name":"Facebook","url":"https://facebook.com/DarrenOddenbyDesign"}
+              ]'
+            author_bio='Darren is a Charismatic Megafuana using buzzwords like
+              &ldquo;Agile branding growing business authentically.&rdquo;
+
+              He has learned over time that Design &amp; Development projects starts with Discovery.
+              It helps to know the purpose and who will be using the product or service.
+
+              Creating measurable test cases to learn what does and doesn&apos;t work, the
+              product can pivot as results dictate, minimizing exposure.'
+            >
+    </author-info>
+  </body>
+</html>

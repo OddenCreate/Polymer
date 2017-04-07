@@ -1,0 +1,6 @@
+{
+  "name": "oio-polymer",
+  "short_name": "oio-polymer",
+  "start_url": "/",
+  "display": "standalone"
+}
