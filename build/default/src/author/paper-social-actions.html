@@ -1,0 +1,39 @@
+<html><head><link rel="import" href="/bower_components/polymer/polymer.html">
+
+<!-- <link rel="import" href="/bower_components/paper-button/paper-button.html"> -->
+
+
+</head><body><dom-module id="paper-social-actions">
+
+  <template>
+    <style>
+      a {text-decoration: none; color: inherit;}
+    </style>
+    <template is="dom-repeat" items="{{social}}">
+      <a href="{{item.url}}" tabindex="-1"><paper-button>{{item.name}}</paper-button></a>
+    </template>
+  </template>
+
+  <script>
+    class SocialActions extends Polymer.Element {
+      static get is() { return "paper-social-actions" }
+      static get properties() {
+        return {
+          social: {
+            type: Array,
+            value: function() {
+              return [
+                {name: 'Twitter', url: 'https://twitter.com/darrenodden'},
+                {name: 'LinkedIn', url: 'https://linkedin.com/in/darrenodden'}
+              ]
+            }
+          }
+        }
+      }
+
+    }
+    customElements.define(SocialActions.is, SocialActions);
+  </script>
+
+</dom-module>
+</body></html>
